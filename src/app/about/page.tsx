@@ -28,7 +28,7 @@ export default async function About() {
             width="100%"
             height="100vh"
             color="white"
-            background="green"
+            background={{ sm: 'yellow', md: 'green', lg: 'red' }}
         >
             {data?.map((user) => (
                 <DsBox
