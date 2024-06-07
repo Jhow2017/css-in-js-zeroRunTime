@@ -28,7 +28,7 @@ export default async function About() {
             width="100%"
             height="100vh"
             color="white"
-            background="green"
+            background="orange"
         >
             {data?.map((user) => (
                 <DsBox

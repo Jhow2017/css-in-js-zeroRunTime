@@ -5,7 +5,7 @@ import { CSSProperties, ElementType, ReactNode } from 'react';
 import React from 'react';
 import prettier from 'prettier';
 
-const generatedClasses = new Set<string>();
+const generatedClasses = new Map<string, string>(); // Armazena as classes e seus estilos associados
 const classCache = new Map<string, string>();
 const cssPath = path.resolve(process.cwd(), 'styles/generated.css');
 
@@ -40,7 +40,9 @@ const readExistingClasses = (filePath: string) => {
 
 // Inicializar o conjunto de classes geradas com as classes existentes no arquivo
 const existingClasses = readExistingClasses(cssPath);
-existingClasses.forEach((_, className) => generatedClasses.add(className));
+existingClasses.forEach((style, className) =>
+    generatedClasses.set(className, style)
+);
 
 // Função para gerar o nome da classe
 const generateClassName = (css: string) => {
@@ -78,7 +80,7 @@ const writeCssToFile = async (className: string, css: string) => {
         });
         fs.appendFileSync(cssPath, formattedCss + '\n');
         console.log(`CSS written to file: ${formattedCss}`);
-        generatedClasses.add(className);
+        generatedClasses.set(className, css);
     } catch (error) {
         if (error instanceof Error) {
             console.error(`Failed to write CSS to file: ${error.message}`);
@@ -143,10 +145,16 @@ const styled = <T extends ElementType>(Component: T) => {
                 return acc + str + (value || '');
             }, '');
 
-            const className = generateClassName(cssString);
+            const cacheKey = JSON.stringify(cssString);
+            let className = classCache.get(cacheKey);
 
-            if (!generatedClasses.has(className)) {
-                writeCssToFile(className, cssString);
+            if (!className) {
+                className = generateClassName(cssString);
+                classCache.set(cacheKey, className);
+
+                if (!generatedClasses.has(className)) {
+                    writeCssToFile(className, cssString);
+                }
             }
 
             const combinedClassName = propClassName
