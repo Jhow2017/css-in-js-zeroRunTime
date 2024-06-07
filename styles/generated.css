@@ -1,0 +1,103 @@
+.sc-6811342266bcb8656ea9e6c010eb5b6e { 
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    
+
+    @media (max-width: 768px) {
+        background-color: green;
+    }
+
+    &:hover {
+        background-color: darkblue;
+    }
+ }
+.sc-75cf22f84a9dff24dbfe818641ebf264 { 
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    
+
+    @media (max-width: 768px) {
+        background-color: green;
+    }
+
+    &:hover {
+        background-color: darkred;
+    }
+ }
+.sc-6138aa6dcd549463b83aa95a5a64d9ee { 
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    
+            background-color: gray;
+            cursor: not-allowed;
+        
+
+    @media (max-width: 768px) {
+        background-color: green;
+    }
+
+    &:hover {
+        background-color: darkred;
+    }
+ }
+.sc-1ecdf79853ab9130e69b98a714418773 { 
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    
+
+    &:hover {
+        background-color: darkblue;
+    }
+ }
+.sc-7e382ba9eb52db3fd7d80fe719731bdf { 
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    
+
+    &:hover {
+        background-color: darkred;
+    }
+ }
+.sc-d58c4e72e5768b51fe5522e19b7336b0 { 
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    
+            @media (max-width: 768px) {
+                background-color: green;
+            }
+        
+
+    &:hover {
+        background-color: darkred;
+    }
+ }
