@@ -11,8 +11,7 @@
     },
     "dependencies": {
         "next": "14.2.3",
-        "postcss": "^8.4.38",
-        "postcss-preset-env": "^9.5.14",
+        "prettier": "^3.3.1",
         "react": "^18",
         "react-dom": "^18"
     },

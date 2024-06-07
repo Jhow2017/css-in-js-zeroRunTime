@@ -1,24 +1,6 @@
-import React, { CSSProperties, ElementType, ReactNode } from 'react';
-import { createCssClass } from '../../utils/styleExtractor';
+import React from 'react';
 
-interface BoxProps extends CSSProperties {
-    as?: ElementType;
-    children?: ReactNode;
-    _hover?: CSSProperties;
-    _focus?: CSSProperties;
-}
-
-const Box: React.FC<BoxProps> = ({
-    as: Component = 'div',
-    children,
-    _hover,
-    _focus,
-    ...props
-}) => {
-    const className = createCssClass({ ...props, _hover, _focus });
-
-    return <Component className={className}>{children}</Component>;
-};
+import DsBox from 'ds/design-system/components/layout/box';
 
 interface User {
     id: number;
@@ -35,7 +17,7 @@ export default async function About() {
     const data = await fetchUsers();
 
     return (
-        <Box
+        <DsBox
             as="main"
             display="flex"
             flexDirection="column"
@@ -49,7 +31,7 @@ export default async function About() {
             background="green"
         >
             {data?.map((user) => (
-                <Box
+                <DsBox
                     key={user.id}
                     as="p"
                     color="black"
@@ -63,8 +45,8 @@ export default async function About() {
                     }}
                 >
                     {user.name} ({user.email})
-                </Box>
+                </DsBox>
             ))}
-        </Box>
+        </DsBox>
     );
 }

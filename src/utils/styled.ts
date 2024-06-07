@@ -3,6 +3,7 @@ import path from 'path';
 import crypto from 'crypto';
 import { CSSProperties, ElementType, ReactNode } from 'react';
 import React from 'react';
+import prettier from 'prettier';
 
 const generatedClasses = new Set<string>();
 const classCache = new Map<string, string>();
@@ -60,19 +61,23 @@ const convertPropsToCss = (props: CSSProperties) => {
             return `${kebabKey}: ${value};`;
         })
         .filter(Boolean)
-        .join(' ');
+        .join('; ');
 };
 
 // Função para escrever o CSS no arquivo
-const writeCssToFile = (className: string, css: string) => {
+const writeCssToFile = async (className: string, css: string) => {
     if (generatedClasses.has(className)) return;
 
     ensureDirectoryExistence(cssPath);
     const cssContent = `.${className} { ${css} }`;
 
     try {
-        fs.appendFileSync(cssPath, cssContent + '\n');
-        console.log(`CSS written to file: ${cssContent}`);
+        const formattedCss = await prettier.format(cssContent, {
+            parser: 'css',
+            tabWidth: 4,
+        });
+        fs.appendFileSync(cssPath, formattedCss + '\n');
+        console.log(`CSS written to file: ${formattedCss}`);
         generatedClasses.add(className);
     } catch (error) {
         if (error instanceof Error) {

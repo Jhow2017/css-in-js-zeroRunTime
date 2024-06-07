@@ -1,103 +1,142 @@
-.sc-6811342266bcb8656ea9e6c010eb5b6e { 
-    background-color: blue;
-    color: white;
+.sc-dadef89eae2869504142d2adb535cb31 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background: green;
+}
 
-    
-
-    @media (max-width: 768px) {
-        background-color: green;
-    }
+.sc-13f27967e49e9d67e4eb6994e773e7e8 {
+    color: black;
 
     &:hover {
-        background-color: darkblue;
+        background: red;
+        cursor: pointer;
     }
- }
-.sc-75cf22f84a9dff24dbfe818641ebf264 { 
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 
-    
-
-    @media (max-width: 768px) {
-        background-color: green;
+    &:focus {
+        background: yellow;
     }
+}
+
+.sc-13f27967e49e9d67e4eb6994e773e7e8 {
+    color: black;
 
     &:hover {
-        background-color: darkred;
+        background: red;
+        cursor: pointer;
     }
- }
-.sc-6138aa6dcd549463b83aa95a5a64d9ee { 
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 
-    
-            background-color: gray;
-            cursor: not-allowed;
-        
-
-    @media (max-width: 768px) {
-        background-color: green;
+    &:focus {
+        background: yellow;
     }
+}
+
+.sc-13f27967e49e9d67e4eb6994e773e7e8 {
+    color: black;
 
     &:hover {
-        background-color: darkred;
+        background: red;
+        cursor: pointer;
     }
- }
-.sc-1ecdf79853ab9130e69b98a714418773 { 
-    background-color: blue;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 
-    
+    &:focus {
+        background: yellow;
+    }
+}
+
+.sc-13f27967e49e9d67e4eb6994e773e7e8 {
+    color: black;
 
     &:hover {
-        background-color: darkblue;
+        background: red;
+        cursor: pointer;
     }
- }
-.sc-7e382ba9eb52db3fd7d80fe719731bdf { 
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 
-    
+    &:focus {
+        background: yellow;
+    }
+}
+
+.sc-13f27967e49e9d67e4eb6994e773e7e8 {
+    color: black;
 
     &:hover {
-        background-color: darkred;
+        background: red;
+        cursor: pointer;
     }
- }
-.sc-d58c4e72e5768b51fe5522e19b7336b0 { 
-    background-color: red;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 
-    
-            @media (max-width: 768px) {
-                background-color: green;
-            }
-        
+    &:focus {
+        background: yellow;
+    }
+}
+
+.sc-13f27967e49e9d67e4eb6994e773e7e8 {
+    color: black;
 
     &:hover {
-        background-color: darkred;
+        background: red;
+        cursor: pointer;
     }
- }
+
+    &:focus {
+        background: yellow;
+    }
+}
+
+.sc-13f27967e49e9d67e4eb6994e773e7e8 {
+    color: black;
+
+    &:hover {
+        background: red;
+        cursor: pointer;
+    }
+
+    &:focus {
+        background: yellow;
+    }
+}
+
+.sc-13f27967e49e9d67e4eb6994e773e7e8 {
+    color: black;
+
+    &:hover {
+        background: red;
+        cursor: pointer;
+    }
+
+    &:focus {
+        background: yellow;
+    }
+}
+
+.sc-13f27967e49e9d67e4eb6994e773e7e8 {
+    color: black;
+
+    &:hover {
+        background: red;
+        cursor: pointer;
+    }
+
+    &:focus {
+        background: yellow;
+    }
+}
+
+.sc-13f27967e49e9d67e4eb6994e773e7e8 {
+    color: black;
+
+    &:hover {
+        background: red;
+        cursor: pointer;
+    }
+
+    &:focus {
+        background: yellow;
+    }
+}
