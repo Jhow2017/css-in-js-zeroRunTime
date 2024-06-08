@@ -1,7 +1,8 @@
+import '../../styles/globals.css';
+import '../../styles/generated.css';
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '../../styles/generated.css';
-import '../../styles/globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,7 +18,23 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                {children}
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            if (!sessionStorage.getItem('reloaded')) {
+                                sessionStorage.setItem('reloaded', 'true');
+                                if (performance.navigation.type === 1 || performance.navigation.type === 0) {
+                                window.location.reload();
+                                }
+                            } else {
+                                sessionStorage.removeItem('reloaded');
+                            }
+                            `,
+                    }}
+                />
+            </body>
         </html>
     );
 }

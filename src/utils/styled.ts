@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-import { CSSProperties, ElementType, ReactNode } from 'react';
+import { ElementType, ReactNode } from 'react';
 import React from 'react';
 import prettier from 'prettier';
 

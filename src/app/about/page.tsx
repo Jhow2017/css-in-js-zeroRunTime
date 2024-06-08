@@ -1,6 +1,7 @@
 import React from 'react';
 
 import DsBox from 'ds/design-system/components/layout/box';
+import Link from 'next/link';
 
 interface User {
     id: number;
@@ -47,6 +48,7 @@ export default async function About() {
                     {user.name} ({user.email})
                 </DsBox>
             ))}
+            <Link href={'/'}>Voltar</Link>
         </DsBox>
     );
 }
