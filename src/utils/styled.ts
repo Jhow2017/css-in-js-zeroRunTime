@@ -105,7 +105,7 @@ const styled = <T extends ElementType>(Component: T) => {
         strings: TemplateStringsArray,
         ...interpolations: Array<(props: P) => string | false | undefined>
     ) => {
-        return (
+        const StyledComponent = (
             props: P & {
                 as?: ElementType;
                 className?: string;
@@ -156,6 +156,15 @@ const styled = <T extends ElementType>(Component: T) => {
                 children
             );
         };
+
+        // Definir o displayName para o componente gerado
+        StyledComponent.displayName = `styled(${
+            typeof Component === 'string'
+                ? Component
+                : Component.displayName || Component.name || 'Component'
+        })`;
+
+        return StyledComponent;
     };
 };
 
